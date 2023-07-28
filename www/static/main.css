@@ -1,0 +1,25 @@
+#mydiv {
+  position: absolute;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}
+
+
+.line-container::before {
+  content: "";
+  position: absolute;
+  top: 50%; /* Half the height of the container */
+  left: calc(100px + 5px); /* Width of div1 + margin/padding/border + gap between divs */
+  width: calc(100% - 105px); /* The width between div1 and div2 + gap */
+  height: 2px; /* Line thickness */
+  background-color: black;
+}

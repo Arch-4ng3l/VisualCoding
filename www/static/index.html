@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>A static page</title>
+    <link rel="stylesheet" href="/static/main.css"></link>
+    <script src="/static/move.js"></script>
+</head>
+<body>
+    <br>
+    <input type="button" value="Input"></input>
+    <input type="button" value="Output"></input>
+    <input type="button" value="If"></input>
+    <input type="button" value="Else"></input>
+    <input type="button" value="Int"></input>
+    <input type="button" value="Float"></input>
+    <input type="button" value="String"></input>
+    <br>
+
+    {{ range .Content }}
+    <div id="mydiv" onclick="dragElement(this)">
+        {{ if eq .Type "IF"}}
+        <h1>if</h1>
+        {{ else if eq .Type "ELSE"}}
+        <h1>else</h1>
+        {{ end }}
+    </div>
+    <br>
+    <br>
+    {{ end }}
+
+
+
+</body>
+</html>
+
+
+
+
